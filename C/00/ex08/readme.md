@@ -26,9 +26,9 @@ If n=2
 
     now we write our first combination 01,
 
-        iv. in the while loop (line 49) array changed to [1,1], and starting while loop again 1<9 =>ft_check_print(x[1,1],2)
+        iv. in the while loop (line 58) array changed to [1,1], and starting while loop again 1<9 =>ft_check_print(x[1,1],2)
 but this time yes changed to 1 in the functions first while loop and it didn't write anything, ft_check_print ended
 
-         v. in the while loop (line 49) array changed to [2,1]
+         v. in the while loop (line 58) array changed to [2,1]
 
 so goes on...
