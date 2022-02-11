@@ -61,7 +61,7 @@ void	create_while(int x[], int k, int n)
 void	ft_print_combn(int n)
 {
 	int	x[10];
-    /*we limited our array size to comply with the norms, normally use x[n]*/
+    /*we limited our array size to comply with the norms and in the project n<10, normally use x[n]*/
 
 	create_while(x, 0, n);
 }
