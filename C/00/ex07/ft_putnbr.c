@@ -17,7 +17,7 @@ void	ft_putnbr(int number)
         /*we write - at firs if number<0 then we equal to number positive so that our loop run easily*/
 		number = -number;
 	}
-	if (nb == -2147483648)
+	if (number == -2147483648)
     /* -(-2147483648) = -2147483648 
     ref=https://stackoverflow.com/questions/42462352/why-is-2147483648-2147483648-in-a-32-bit-machine/42462712
     so we need to write something special for that number*/
