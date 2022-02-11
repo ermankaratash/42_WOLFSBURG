@@ -27,8 +27,10 @@ void	ft_putnbr(int number)
 	}
 	temp = number;
 	while ((temp / 10) > 0)
+	{
 		temp = temp / 10;
 		size *= 10;
+	}
 	temp = number;
 	while (size)
 	{
