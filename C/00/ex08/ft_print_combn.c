@@ -6,6 +6,7 @@ void	ft_putchar(char c)
 }
 
 void	ft_check_print(int x[], int n)
+/*this is the control function whether we wrote the combination before*/
 {
 	int	i;
 	int	yes;
@@ -37,6 +38,7 @@ void	ft_check_print(int x[], int n)
 void	create_while(int x[], int k, int n)
 {
 	if (k == n - 1)
+	/*unless n=1, it doesn't go on*/
 	{
 		x[k] = '0';
 		while (x[k] <= '9')
@@ -48,6 +50,7 @@ void	create_while(int x[], int k, int n)
 		}
 	}
 	else
+	/*if n!=1*/
 	{
 		x[k] = '0';
 		while (x[k] <= '9')
@@ -60,8 +63,7 @@ void	create_while(int x[], int k, int n)
 
 void	ft_print_combn(int n)
 {
-	int	x[10];
-    /*we limited our array size to comply with the norms and in the project n<10, normally use x[n]*/
+	int	x[];
 
 	create_while(x, 0, n);
 }
