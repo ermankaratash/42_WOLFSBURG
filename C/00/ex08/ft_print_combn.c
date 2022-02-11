@@ -38,7 +38,6 @@ void	ft_check_print(int x[], int n)
 void	create_while(int x[], int k, int n)
 {
 	if (k == n - 1)
-	/*unless n=1, it doesn't go on*/
 	{
 		x[k] = '0';
 		while (x[k] <= '9')
@@ -50,7 +49,6 @@ void	create_while(int x[], int k, int n)
 		}
 	}
 	else
-	/*if n!=1*/
 	{
 		x[k] = '0';
 		while (x[k] <= '9')
