@@ -10,13 +10,11 @@ void    ft_sort_int_tab(int *tab, int size)
    int  temp;
    int  i;
    int  j;
-   int  k;
 
    i = 0;
-   j = size;
-   k = 0;
+   j = 0;
    
-   while (k < size - 1)
+   while (j < size - 1)
    {
        while(i < size - 1)
        {
@@ -29,11 +27,11 @@ void    ft_sort_int_tab(int *tab, int size)
            i++;
         }
         i = 0;
-        k++;
+        j++;
     }
    
    i=0;
-   while (i < j)
+   while (i < size)
    {
        ft_putchar(*(tab + i) + '0');
        i++;
