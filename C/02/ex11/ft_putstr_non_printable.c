@@ -8,13 +8,14 @@ void	ft_putchar(char c)
 void ft_putstr_non_printable(char *str)
 {
 	int	    i;
-    char    hexadecimals[] = {"0123456789abcdef"};
+    char    *hexadecimals;
 
 	i = 0;
+    hexadecimals = "0123456789abcdef";
 
     while (*(str + i))
     {
-        if (*(str + i) < 32 && *(str + i) >= 0 )
+        if (*(str + i) < 32 && *(str + i) >= 0)
         /*nonprintable characters are between 0 and 31 in ascii table*/
         {
             ft_putchar('\\');
@@ -24,7 +25,7 @@ void ft_putstr_non_printable(char *str)
         else
         {
             ft_putchar(*(str + i));
-        }        
+        }
         i++;
     }
 }
