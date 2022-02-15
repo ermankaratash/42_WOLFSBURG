@@ -47,7 +47,7 @@ unsigned int    ft_strlcpy(char *dest, char *src, unsigned int size)
 	{
 		length++;
 	}
-    if (size = 0)
+    if (size == 0)
     {
         return (length);
     }
