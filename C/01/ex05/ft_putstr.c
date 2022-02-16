@@ -5,7 +5,7 @@ void	ft_putstr(char *str)
 	int		i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (*(str + i) != '\0')
     /*arrays last value is \0, so loop endet when its come last value*/
 	{	
 		write(1, (str + i), 1);
