@@ -5,7 +5,7 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_check_print(int x[], int n)
+void	ft_check(int x[], int n)
 /*this is the control function whether we wrote the combination before*/
 {
 	int	i;
@@ -35,7 +35,7 @@ void	ft_check_print(int x[], int n)
 	}
 }
 
-void	create_while(int x[], int k, int n)
+void	ft_loop(int x[], int k, int n)
 {
 	if (k == n - 1)
 	{
@@ -44,7 +44,7 @@ void	create_while(int x[], int k, int n)
 		{
 			if (n == 9 && x[0] > '1')
 				break ;
-			ft_check_print(x, n);
+			ft_check(x, n);
 			x[k]++;
 		}
 	}
@@ -53,7 +53,7 @@ void	create_while(int x[], int k, int n)
 		x[k] = '0';
 		while (x[k] <= '9')
 		{
-			create_while(x, k + 1, n);
+			ft_loop(x, k + 1, n);
 			x[k]++;
 		}
 	}
@@ -61,9 +61,9 @@ void	create_while(int x[], int k, int n)
 
 void	ft_print_combn(int n)
 {
-	int	x[];
+	int	x[2];
 
-	create_while(x, 0, n);
+	ft_loop(x, 0, n);
 }
 
 int	main(void)
