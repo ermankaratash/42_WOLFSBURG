@@ -1,12 +1,13 @@
 #include <unistd.h>
 
+#include <stdio.h>
+
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void	ft_check(int x[], int n)
-/*this is the control function whether we wrote the combination before*/
+void	ft_check_print(int x[], int n)
 {
 	int	i;
 	int	yes;
@@ -35,7 +36,7 @@ void	ft_check(int x[], int n)
 	}
 }
 
-void	ft_loop(int x[], int k, int n)
+void	create_while(int x[], int k, int n)
 {
 	if (k == n - 1)
 	{
@@ -44,7 +45,7 @@ void	ft_loop(int x[], int k, int n)
 		{
 			if (n == 9 && x[0] > '1')
 				break ;
-			ft_check(x, n);
+			ft_check_print(x, n);
 			x[k]++;
 		}
 	}
@@ -53,7 +54,7 @@ void	ft_loop(int x[], int k, int n)
 		x[k] = '0';
 		while (x[k] <= '9')
 		{
-			ft_loop(x, k + 1, n);
+			create_while(x, k + 1, n);
 			x[k]++;
 		}
 	}
@@ -61,13 +62,25 @@ void	ft_loop(int x[], int k, int n)
 
 void	ft_print_combn(int n)
 {
-	int	x[2];
+	int	x[10];
 
-	ft_loop(x, 0, n);
+	create_while(x, 0, n);
 }
 
 int	main(void)
 {
-	ft_print_combn(2);
+	int n;
+
+	n = 2;
+	while(n <= 5)
+	{
+		printf("n = %d:\n", n);
+		ft_print_combn(n++);
+		write(1, "\n", 1);
+	}
+	n = 9;
+	printf("n = %d:\n", n);
+	ft_print_combn(n++);
+	write(1, "\n", 1);
 	return (0);
 }
