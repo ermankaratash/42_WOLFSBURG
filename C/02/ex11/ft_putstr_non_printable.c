@@ -36,5 +36,11 @@ int main(void)
 
     ft_putstr_non_printable(str);
 
+	char str2[] = {'0', '1', 2, 30, 16, '4', 'a', 19, 'C'};
+
+	write(1, "\n", 1);
+
+	ft_putstr_non_printable(str2);
+
     return (0);
 }
