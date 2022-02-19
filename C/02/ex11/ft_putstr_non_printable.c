@@ -5,6 +5,11 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 int	ft_char_is_printable(char c)
 {
 	if (c >= 32 && c <= 126)
