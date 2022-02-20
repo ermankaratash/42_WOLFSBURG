@@ -5,11 +5,9 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 
 	i = 0;
 	length = 0;
-	while (src[length])
-	{
+	while (dest[length])
 		length++;
-	}
-	while (src[i] && (i < size - 1))
+	while (src[i] && (length < size - 1))
 	{
 		dest[length] = src[i];
 		i++;
