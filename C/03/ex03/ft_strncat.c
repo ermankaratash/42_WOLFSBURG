@@ -4,7 +4,7 @@
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
+	unsigned int	i;
 	int	dest_length;
 
 	i = 0;
