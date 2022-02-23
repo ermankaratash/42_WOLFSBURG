@@ -1,13 +1,11 @@
 #include <unistd.h>
 
-#include <stdio.h>
-
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void	ft_check_putchar(int x[], int n)
+void	ft_check(int x[], int n)
 {
 	int	i;
 	int	yes;
@@ -45,7 +43,7 @@ void	ft_loop(int x[], int k, int n)
 		{
 			if (n == 9 && x[0] > '1')
 				break ;
-			ft_check_putchar(x, n);
+			ft_check(x, n);
 			x[k]++;
 		}
 	}
@@ -65,22 +63,4 @@ void	ft_print_combn(int n)
 	int	x[10];
 
 	ft_loop(x, 0, n);
-}
-
-int	main(void)
-{
-	int n;
-
-	n = 2;
-	while(n <= 5)
-	{
-		printf("n = %d:\n", n);
-		ft_print_combn(n++);
-		write(1, "\n", 1);
-	}
-	n = 9;
-	printf("n = %d:\n", n);
-	ft_print_combn(n++);
-	write(1, "\n", 1);
-	return (0);
 }

@@ -14,18 +14,14 @@ void	ft_commas(void)
 void	ft_print_comb(void)
 {
 	int	num[3];
-    /* defined and array with 3 digit=[,,]*/
 
 	num[0] = '0';
-    /*[0,,]*/
 	while (num[0] <= '9')
 	{
 		num[1] = '0';
-        /*[0,0,]*/
 		while (num[1] <= '9')
 		{
 			num[2] = '0';
-            /*[0,0,0]*/
 			while (num[2] <= '9')
 			{
 				if (num[0] < num[1] && num[1] < num[2])
@@ -34,10 +30,7 @@ void	ft_print_comb(void)
 					ft_putchar(num[1]);
 					ft_putchar(num[2]);
 					if (! (num[0] == '7' && num[1] == '8' && num[2] == '9'))
-                    /*it is the last number we will reach so if it does not equal 789 then do it*/
-					{
 						ft_commas();
-					}
 				}
 				num[2]++;
 			}
