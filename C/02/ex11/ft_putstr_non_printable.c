@@ -1,3 +1,4 @@
+/*it isnt correct*/
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -5,14 +6,9 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_putchar(char c)
+int	ft_char_is_non_printable(char c)
 {
-	write(1, &c, 1);
-}
-
-int	ft_char_is_printable(char c)
-{
-	if (c >= 32 && c <= 126)
+	if ((c < 32 && c >= 0) || c == 127)
 		return (1);
 	return (0);
 }
@@ -26,7 +22,7 @@ void	ft_putstr_non_printable(char *str)
 	hexadecimals = "0123456789abcdef";
 	while (str[i])
 	{
-		if (!(ft_char_is_printable(str[i])))
+		if (ft_char_is_non_printable(str[i]))
 		{
 			ft_putchar('\\');
 			ft_putchar(hexadecimals[str[i] / 16]);
@@ -38,19 +34,4 @@ void	ft_putstr_non_printable(char *str)
 		}
 		i++;
 	}
-}
-
-int main(void)
-{
-    char    str[] = {"Coucou\ntu vas bien ?"};
-
-    ft_putstr_non_printable(str);
-
-	char str2[] = {'0', '1', 2, 30, 16, '4', 'a', 19, 'C'};
-
-	write(1, "\n", 1);
-
-	ft_putstr_non_printable(str2);
-
-    return (0);
 }

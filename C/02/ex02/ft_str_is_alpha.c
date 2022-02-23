@@ -1,10 +1,3 @@
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 int	ft_str_is_alpha(char *str)
 {
 	int	i;
@@ -15,24 +8,18 @@ int	ft_str_is_alpha(char *str)
 	while (str[i])
 	{
 		if (str[i] >= 'a' && str[i] <= 'z')
+		{
 			temp = i + 1;
+		}
 		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
 			temp = i + 1;
+		}
 		if (temp <= i)
+		{
 			return (0);
+		}
 		i++;
 	}
 	return (1);
-}
-
-int main(void)
-{
-    char    str[] = {"Hello World"};
-    int     p;
-
-    p = ft_str_is_alpha(str);
-        
-    ft_putchar(p + '0');
-
-    return (0);
 }

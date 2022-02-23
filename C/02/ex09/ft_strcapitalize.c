@@ -1,10 +1,3 @@
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 int	ft_char_is_alpha_numeric(char c)
 {
 	if ((c >= 'a') && (c <= 'z'))
@@ -36,22 +29,4 @@ char	*ft_strcapitalize(char *str)
 		}
 	}
 	return (str);
-}
-
-int main(void)
-{
-    char    str[] = {"-[I=A@)T@:E)9CFSqx;$F0';Q#R2YL^T&K$saLuT, Comment tu vas ? 42mots quarante-deux; cinquante+et+un\n"};
-    int i;
-    char *p;
-
-    p = ft_strcapitalize(str);
-
-    i = 0;
-    while (str[i])
-    {
-        ft_putchar(p[i]);
-        i++;
-    }
-
-    return (0);
 }
