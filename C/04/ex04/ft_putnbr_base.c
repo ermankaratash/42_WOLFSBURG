@@ -15,6 +15,7 @@ int	ft_base_length(char *base)
 {
 	int	i;
 
+	i = 0;
 	while (base[i])
 		i++;
 	return (i);
